@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Django</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    {% load static %}
+     Core theme CSS (includes Bootstrap)
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <aside>
+<img src="{% static 'img/django.jpeg'%}">
+        <h3>Навигация</h3>
+        <ul>
+        <a class="nav-link" href="/about/">About<li></a>
+        <a class="nav-link" href="/news/">News<li></a>
+        <a class="nav-link" href="/products/">Products<li></a>
+        <a href="{% url 'post_update'%}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>update news</button></li></a>
+        <a href="{% url 'post_delete'%}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>delete news</button></li></a>
+        </ul>
+         </li>
+    </aside>
+    <main>
+            {% block content %}
+            {{ flatpage.content }}
+            {% endblock content %}
+    </main>
+
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

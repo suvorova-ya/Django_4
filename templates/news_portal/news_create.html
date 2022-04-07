@@ -1,0 +1,15 @@
+{% extends 'news_portal/default.html' %}
+
+{% block title %}{{ post.title }}{% endblock title %}
+
+{% block content %}
+
+      <h3>{{ post.title }}</h3>
+<form method="POST">
+    {% csrf_token %}
+    {{ form }} <!-- Теперь нам нужна только готовая форма и кнопка -->
+    <input type="submit" value="Добавить статью">
+</form>
+
+{% endblock content %}
+

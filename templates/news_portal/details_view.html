@@ -1,0 +1,15 @@
+{% extends 'news_portal/default.html' %}
+
+{% block title %}{{ post.title }}{% endblock title %}
+
+{% block content %}
+
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.text }}</p>
+      <p>{{ post.dateCreation|date:'d M Y' }}</p>
+      <p>{{ post.author }}</p>
+
+ <hr>
+
+{% endblock content %}
+
